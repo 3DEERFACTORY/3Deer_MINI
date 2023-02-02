@@ -1385,7 +1385,7 @@
   #if CAN_SHOW_REMAINING_TIME
     #define SHOW_REMAINING_TIME           // Display estimated time to completion
     #if ENABLED(SHOW_REMAINING_TIME)
-      #define USE_M73_REMAINING_TIME      // Use remaining time from M73 command instead of estimation
+      //#define USE_M73_REMAINING_TIME      // Use remaining time from M73 command instead of estimation
       #define ROTATE_PROGRESS_DISPLAY     // Display (P)rogress, (E)lapsed, and (R)emaining time
     #endif
   #endif
@@ -1728,7 +1728,7 @@
 
 #if HAS_MARLINUI_U8GLIB || IS_DWIN_MARLINUI
   // Show SD percentage next to the progress bar
-  //#define SHOW_SD_PERCENT
+  #define SHOW_SD_PERCENT
 
   // Enable to save many cycles by drawing a hollow frame on Menu Screens
   #define MENU_HOLLOW_FRAME
@@ -2509,8 +2509,8 @@
                                                   //   Set to 0 for manual extrusion.
                                                   //   Filament can be extruded repeatedly from the Filament Change menu
                                                   //   until extrusion is consistent, and to purge old filament.
-  #define ADVANCED_PAUSE_RESUME_PRIME          0  // (mm) Extra distance to prime nozzle after returning from park.
-  //#define ADVANCED_PAUSE_FANS_PAUSE             // Turn off print-cooling fans while the machine is paused.
+  //#define ADVANCED_PAUSE_RESUME_PRIME          0  // (mm) Extra distance to prime nozzle after returning from park.
+  #define ADVANCED_PAUSE_FANS_PAUSE             // Turn off print-cooling fans while the machine is paused.
 
                                                   // Filament Unload does a Retract, Delay, and Purge first:
   #define FILAMENT_UNLOAD_PURGE_RETRACT        0  // (mm) Unload initial retract length.
@@ -2798,7 +2798,7 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT      514
+    #define E0_CURRENT      520
     #if ENABLED(GEARBOX_BEAR)
       #define E0_MICROSTEPS    16
     #else
